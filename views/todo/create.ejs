@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create todo</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees">Todo List</a></h3>
+      <h1>Create New todo</h1>
+      <form action="/todos/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Label</td>
+              <td><input type="text" name="label" /></td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td><textarea name="content"></textarea></td>
+            </tr>
+            <tr>
+              <td>Start</td>
+              <td><input type="text" name="start" /></td>
+            </tr>
+            <tr>
+              <td>Finish</td>
+              <td><input type="number" name="finish" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Save" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

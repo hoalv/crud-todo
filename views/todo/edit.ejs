@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Employee</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/todos">Todo List</a></h3>
+      <h1>Edit Todo</h1>
+      <form action="/todos/update/<%= todo._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Label</td>
+              <td><input type="text" name="label" value="<%= todo.label %>" /></td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td><textarea name="address"><%= todo.content %></textarea></td>
+            </tr>
+            <tr>
+              <td>Start</td>
+              <td><input type="text" name="start" value="<%= todo.start %>" /></td>
+            </tr>
+            <tr>
+              <td>Finish</td>
+              <td><input type="number" name="finish" value="<%= todo.finish %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

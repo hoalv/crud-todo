@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees">Todo List</a></h3>
+      <h1>Todo Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Label</td>
+            <td>:</td>
+            <td><%= todo.label %></td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>:</td>
+            <td><%= todo.content %></td>
+          </tr>
+          <tr>
+            <td>Start</td>
+            <td>:</td>
+            <td><%= todo.start %></td>
+          </tr>
+          <tr>
+            <td>Finish</td>
+            <td>:</td>
+            <td>$<%= todo.finish %>/year</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/todos/edit/<%= todo._id%>">EDIT</a></h3>
+      <form action="/todos/delete/<%= todo._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>
